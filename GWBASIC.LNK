@@ -34,4 +34,4 @@ SCNDRV.OBJ+
 SCNEDT.OBJ+
 OEM.OBJ
 gwbasic /STACK:8192
-gwbasic.map;
+gwbasic.map /MAP;
