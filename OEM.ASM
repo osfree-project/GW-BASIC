@@ -82,6 +82,9 @@ SCROUT:
 		pop	ax
         RET
 
+; MSX:  Record current cursor addresses mask pattern
+; Input    : BX - Cursor address
+;            AL - Mask pattern
 PUBLIC	STOREC
 STOREC:			;Dummy function
 	RET
@@ -102,6 +105,7 @@ PUBLIC	RDTRIG
 RDTRIG:			;Dummy function
 	RET
 
+; MSX:  Set horizontal screen pixels
 PUBLIC	NSETCX
 NSETCX:			;Dummy function
 	RET
@@ -126,6 +130,7 @@ PUBLIC	SETCBF
 SETCBF:			;Dummy function
 	RET
 
+; MSX:  Shifts screen pixel to the left
 PUBLIC	LEFTC
 LEFTC:			;Dummy function
 	RET
@@ -146,10 +151,13 @@ PUBLIC	SETFBC
 SETFBC:			;Dummy function
 	RET
 
+; MSX:  Tests whether DOWNC is possible, if possible, execute DOWNC
+; Set carry flag set if operation would end outside the screen
 PUBLIC	TDOWNC
 TDOWNC:			;Dummy function
 	RET
 
+; MSX:  Scans screen pixels to the right
 PUBLIC	SCANR
 SCANR:			;Dummy function
 	RET
@@ -162,18 +170,24 @@ PUBLIC	GETHED
 GETHED:			;Dummy function
 	RET
 
+; MSX:  Shifts screen pixel up
 PUBLIC	UPC
 UPC:			;Dummy function
 	RET
 
+; MSX:  Scans screen pixels to the left
 PUBLIC	SCANL
 SCANL:			;Dummy function
 	RET
 
+; MSX:  Gets current cursor addresses mask pattern
+; Output   : BX - Cursor address
+;            AL - Mask pattern
 PUBLIC	FETCHC
 FETCHC:			;Dummy function
 	RET
 
+; MSX:  Scales X and Y coordinates
 PUBLIC	SCALXY
 SCALXY:			;Dummy function
 	RET
@@ -190,6 +204,7 @@ PUBLIC	STACOM
 STACOM:			;Dummy function
 	RET
 
+; MSX:  Reads attribute byte of current screen pixel
 PUBLIC	READC
 READC:			;Dummy function
 	RET
@@ -198,10 +213,13 @@ PUBLIC	INFMAP
 INFMAP:			;Dummy function
 	RET
 
+; MSX:  Tests whether UPC is possible, if possible, execute UPC
+; Set carry flag set if operation would end outside the screen
 PUBLIC	TUPC
 TUPC:			;Dummy function
 	RET
 
+; MSX:  Shifts screen pixel to the right
 PUBLIC	RIGHTC
 RIGHTC:			;Dummy function
 	RET
@@ -210,6 +228,8 @@ PUBLIC	SEGINI
 SEGINI:			;Dummy function
 	RET
 
+; MSX:  Gets screen relations
+; Output   : DX, BX
 PUBLIC	GTASPC
 GTASPC:			;Dummy function
 	RET
@@ -218,6 +238,7 @@ PUBLIC	RECCOM
 RECCOM:			;Dummy function
 	RET
 
+; MSX:  Returns current screen pixel of specified attribute byte
 PUBLIC	SETC
 SETC:			;Dummy function
 	RET
@@ -226,6 +247,7 @@ PUBLIC	PIXSIZ
 PIXSIZ:			;Dummy function
 	RET
 
+; MSX:  Shifts screen pixel down
 PUBLIC	DOWNC
 DOWNC:			;Dummy function
 	RET
@@ -287,10 +309,12 @@ PUBLIC	CSRDSP
 CSRDSP:
 	RET
 
+; MSX:  Set attribute byte
 PUBLIC	SETATR
 SETATR:			;Dummy function
 	RET
 
+; MSX:  Initalises the PAINT instruction
 PUBLIC	PNTINI
 PNTINI:			;Dummy function
 	RET
